@@ -19,7 +19,7 @@ Grundregeln für alle C++-Teile:
 |---|---|
 | `repos` (Liste) | Repo-Zusammenfassungen, siehe unten |
 | `busy` | Einlesen läuft |
-| `roots` | durchsuchte Ordner (absolut), Vorgabe `~/projects ~/Anwendungen ~/AI ~/localweb`, gespeichert per `QSettings` |
+| `roots` | durchsuchte Ordner (absolut), Vorgabe `~/projects ~/src ~/git ~/code`, gespeichert per `QSettings` |
 | `fixture` | Testdaten-Modus aktiv |
 | `githubUser` | Login des angemeldeten GitHub-Nutzers (`AGM_GITHUB_USER`, sonst einmal `gh api user --jq .login` im Worker-Thread, zwischengespeichert); `""` = kein gh oder nicht angemeldet – dann gilt kein Repo als eigenes GitHub-Repo |
 | `rescan()` | alle Ordner neu durchsuchen; Ergebnis über `reposChanged` |

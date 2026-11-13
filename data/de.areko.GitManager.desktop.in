@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Areko Git Manager
+GenericName=Git-Verwaltung
+Comment=Lokale Git-Repos, Versionen, Updates und Programme im Überblick
+Exec=areko-git-manager
+Icon=de.areko.GitManager
+Terminal=false
+Categories=Development;RevisionControl;Qt;
+Keywords=git;repo;repos;version;versionen;commit;update;github;
+StartupWMClass=areko-git-manager

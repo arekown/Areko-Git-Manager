@@ -132,7 +132,7 @@
 <context>
     <name>ProjRow</name>
     <message numerus="yes">
-        <location filename="../qml/ProjRow.qml" line="186"/>
+        <location filename="../qml/ProjRow.qml" line="195"/>
         <source>%n NEU</source>
         <extracomment>badge: new versions upstream</extracomment>
         <translation>
@@ -141,7 +141,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/ProjRow.qml" line="188"/>
+        <location filename="../qml/ProjRow.qml" line="197"/>
         <source>%n OFFEN</source>
         <extracomment>badge: files with uncommitted changes</extracomment>
         <translation>
@@ -150,7 +150,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/ProjRow.qml" line="192"/>
+        <location filename="../qml/ProjRow.qml" line="201"/>
         <source>%1 Vers.</source>
         <extracomment>badge, short for &quot;versions&quot; (commits); %1 = formatted number</extracomment>
         <translation>

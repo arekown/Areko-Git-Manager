@@ -85,7 +85,7 @@
     <message>
         <location filename="../src/gitactions.cpp" line="392"/>
         <source>Für dieses Repo läuft gerade schon eine Aktion.</source>
-        <translation>È già in corso un'azione per questo repo.</translation>
+        <translation>È già in corso un&apos;azione per questo repo.</translation>
     </message>
     <message>
         <location filename="../src/gitactions.cpp" line="457"/>
@@ -514,6 +514,21 @@
 <context>
     <name>ImageCompare</name>
     <message>
+        <location filename="../qml/ImageCompare.qml" line="11"/>
+        <source>◀ ALT</source>
+        <translation>◀ PRIMA</translation>
+    </message>
+    <message>
+        <location filename="../qml/ImageCompare.qml" line="12"/>
+        <source>NEU ▶</source>
+        <translation>DOPO ▶</translation>
+    </message>
+    <message>
+        <location filename="../qml/ImageCompare.qml" line="12"/>
+        <source>NEU HINZUGEFÜGT</source>
+        <translation>AGGIUNTO</translation>
+    </message>
+    <message>
         <location filename="../qml/ImageCompare.qml" line="51"/>
         <source>lädt …</source>
         <translation>caricamento …</translation>
@@ -726,7 +741,7 @@
     <message>
         <location filename="../qml/Main.qml" line="750"/>
         <source>„%1“ kommt mit dem ganzen Ordner in den Papierkorb.</source>
-        <translation>«%1» verrà spostato nel cestino con l'intera cartella.</translation>
+        <translation>«%1» verrà spostato nel cestino con l&apos;intera cartella.</translation>
     </message>
     <message>
         <location filename="../qml/Main.qml" line="761"/>
@@ -785,12 +800,12 @@
     <message>
         <location filename="../qml/Main.qml" line="789"/>
         <source>Das ist die einzige Kopie</source>
-        <translation>È l'unica copia</translation>
+        <translation>È l&apos;unica copia</translation>
     </message>
     <message>
         <location filename="../qml/Main.qml" line="798"/>
         <source>Enthält weitere Repos – werden mitgelöscht:</source>
-        <translation>Contiene altri repo – eliminati anch'essi:</translation>
+        <translation>Contiene altri repo – eliminati anch&apos;essi:</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/Main.qml" line="812"/>
@@ -804,7 +819,7 @@
     <message>
         <location filename="../qml/Main.qml" line="821"/>
         <source>Arbeitskopien – kommen mit in den Papierkorb:</source>
-        <translation>Worktree – spostati anch'essi nel cestino:</translation>
+        <translation>Worktree – spostati anch&apos;essi nel cestino:</translation>
     </message>
     <message>
         <location filename="../qml/Main.qml" line="830"/>
@@ -1031,7 +1046,7 @@
     <message>
         <location filename="../qml/Main.qml" line="1132"/>
         <source>Starter – kommen mit in den Papierkorb:</source>
-        <translation>Launcher – spostati anch'essi nel cestino:</translation>
+        <translation>Launcher – spostati anch&apos;essi nel cestino:</translation>
     </message>
     <message>
         <location filename="../qml/Main.qml" line="1132"/>
@@ -1097,7 +1112,7 @@
     <message>
         <location filename="../qml/ProgramView.qml" line="137"/>
         <source>Startmenü-Einträge werden beim Update angepasst</source>
-        <translation>Le voci del menu di avvio vengono adattate all'aggiornamento</translation>
+        <translation>Le voci del menu di avvio vengono adattate all&apos;aggiornamento</translation>
     </message>
     <message>
         <location filename="../qml/ProgramView.qml" line="142"/>
@@ -1128,38 +1143,39 @@
 <context>
     <name>ProjRow</name>
     <message>
-        <location filename="../qml/ProjRow.qml" line="80"/>
+        <location filename="../qml/ProjRow.qml" line="81"/>
+        <location filename="../qml/ProjRow.qml" line="91"/>
         <source>↓ ALLE AKTUALISIEREN (%1)</source>
         <extracomment>%1 = number of repos with news in this sub-group (long and short form)</extracomment>
         <translation>↓ AGGIORNA TUTTI (%1)</translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="80"/>
+        <location filename="../qml/ProjRow.qml" line="81"/>
         <source>↓ ALLE (%1)</source>
         <translation>↓ TUTTI (%1)</translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="92"/>
+        <location filename="../qml/ProjRow.qml" line="101"/>
         <source>Kein Projekt gefunden.</source>
         <translation>Nessun progetto trovato.</translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="182"/>
+        <location filename="../qml/ProjRow.qml" line="191"/>
         <source>⚠ NUR LOKAL</source>
         <translation>⚠ SOLO LOCALE</translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="183"/>
+        <location filename="../qml/ProjRow.qml" line="192"/>
         <source>PRIVAT</source>
         <translation>PRIVATO</translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="183"/>
+        <location filename="../qml/ProjRow.qml" line="192"/>
         <source>ÖFFENTLICH</source>
         <translation>PUBBLICO</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/ProjRow.qml" line="186"/>
+        <location filename="../qml/ProjRow.qml" line="195"/>
         <source>%n NEU</source>
         <extracomment>badge: new versions upstream</extracomment>
         <translation>
@@ -1168,7 +1184,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/ProjRow.qml" line="188"/>
+        <location filename="../qml/ProjRow.qml" line="197"/>
         <source>%n OFFEN</source>
         <extracomment>badge: files with uncommitted changes</extracomment>
         <translation>
@@ -1177,7 +1193,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/ProjRow.qml" line="192"/>
+        <location filename="../qml/ProjRow.qml" line="201"/>
         <source>%1 Vers.</source>
         <extracomment>badge, short for &quot;versions&quot; (commits); %1 = formatted number</extracomment>
         <translation>
@@ -1186,13 +1202,13 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="194"/>
+        <location filename="../qml/ProjRow.qml" line="203"/>
         <source>%1 VERFÜGBAR</source>
         <comment>a newer program version</comment>
         <translation>%1 DISPONIBILE</translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="195"/>
+        <location filename="../qml/ProjRow.qml" line="204"/>
         <source>✓ AKTUELL</source>
         <comment>program is up to date</comment>
         <translation>✓ AGGIORNATO</translation>
@@ -1584,7 +1600,7 @@
     <message>
         <location filename="../src/updates.cpp" line="395"/>
         <source>Für dieses Repo läuft gerade schon eine Aktion.</source>
-        <translation>È già in corso un'azione per questo repo.</translation>
+        <translation>È già in corso un&apos;azione per questo repo.</translation>
     </message>
     <message>
         <location filename="../src/updates.cpp" line="405"/>
@@ -1632,7 +1648,7 @@
     <message>
         <location filename="../src/updates.cpp" line="555"/>
         <source>Für %1 läuft gerade schon eine Aktion.</source>
-        <translation>È già in corso un'azione per %1.</translation>
+        <translation>È già in corso un&apos;azione per %1.</translation>
     </message>
     <message>
         <location filename="../src/updates.cpp" line="557"/>

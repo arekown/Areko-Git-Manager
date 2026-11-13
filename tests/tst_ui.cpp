@@ -1,4 +1,4 @@
-// UI test: loads Main in fixture mode (AGM_FIXTURE, else entwurf/repos2.json in the source folder; skipped if it
+// UI test: loads Main in fixture mode (AGM_FIXTURE, else demo/repos.json in the source folder; skipped if it
 // is missing), clicks through the main views, fails on any QML warning/error and saves five window images to
 // <build>/ui-shots/*.png. Project, version and program to click are taken from the fixture.
 #include <QDir>
@@ -19,7 +19,7 @@
 
 Q_IMPORT_QML_PLUGIN(ArekoGitPlugin)
 
-static const char *kFixture = AGM_SOURCE_DIR "/entwurf/repos2.json";
+static const char *kFixture = AGM_SOURCE_DIR "/demo/repos.json";   // made-up demo data (tools/make_demo_data.py)
 
 static QStringList g_qmlProblems;
 static QtMessageHandler g_prev = nullptr;
@@ -85,7 +85,7 @@ private slots:
         // an own project whose versions change a picture, and a program with releases
         QFile f(QString::fromLocal8Bit(qgetenv("AGM_FIXTURE")));
         if (!f.open(QIODevice::ReadOnly))
-            QSKIP("Fixture fehlt (AGM_FIXTURE oder entwurf/repos2.json) – UI-Test übersprungen.");
+            QSKIP("Fixture fehlt (AGM_FIXTURE oder demo/repos.json) – UI-Test übersprungen.");
         const QJsonObject fx = QJsonDocument::fromJson(f.readAll()).object();
         for (const QJsonValue &r : fx.value(QStringLiteral("repos")).toArray()) {
             if (!m_proj.isEmpty() || r.toObject().value(QStringLiteral("group")).toString() != QLatin1String("eigen"))

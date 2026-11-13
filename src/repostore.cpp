@@ -605,8 +605,8 @@ QStringList readDiff(const QString &path, const QString &hash, const QString &fi
 
 RepoStore::RepoStore(QObject *parent) : QObject(parent)
 {
-    const QStringList defaults{QDir::homePath() + QStringLiteral("/projects"), QDir::homePath() + QStringLiteral("/Anwendungen"),
-                               QDir::homePath() + QStringLiteral("/AI"), QDir::homePath() + QStringLiteral("/localweb")};
+    const QStringList defaults{QDir::homePath() + QStringLiteral("/projects"), QDir::homePath() + QStringLiteral("/src"),
+                               QDir::homePath() + QStringLiteral("/git"), QDir::homePath() + QStringLiteral("/code")};
     m_roots = Fixture::active() ? defaults : QSettings().value(QStringLiteral("roots"), defaults).toStringList();
     QTimer::singleShot(0, this, &RepoStore::rescan);
 }

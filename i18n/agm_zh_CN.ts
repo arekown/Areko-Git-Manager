@@ -512,6 +512,21 @@
 <context>
     <name>ImageCompare</name>
     <message>
+        <location filename="../qml/ImageCompare.qml" line="11"/>
+        <source>◀ ALT</source>
+        <translation>◀ 旧版</translation>
+    </message>
+    <message>
+        <location filename="../qml/ImageCompare.qml" line="12"/>
+        <source>NEU ▶</source>
+        <translation>新版 ▶</translation>
+    </message>
+    <message>
+        <location filename="../qml/ImageCompare.qml" line="12"/>
+        <source>NEU HINZUGEFÜGT</source>
+        <translation>新增</translation>
+    </message>
+    <message>
         <location filename="../qml/ImageCompare.qml" line="51"/>
         <source>lädt …</source>
         <translation>加载中 …</translation>
@@ -1114,38 +1129,39 @@
 <context>
     <name>ProjRow</name>
     <message>
-        <location filename="../qml/ProjRow.qml" line="80"/>
+        <location filename="../qml/ProjRow.qml" line="81"/>
+        <location filename="../qml/ProjRow.qml" line="91"/>
         <source>↓ ALLE AKTUALISIEREN (%1)</source>
         <extracomment>%1 = number of repos with news in this sub-group (long and short form)</extracomment>
         <translation>↓ 全部更新 (%1)</translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="80"/>
+        <location filename="../qml/ProjRow.qml" line="81"/>
         <source>↓ ALLE (%1)</source>
         <translation>↓ 全部 (%1)</translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="92"/>
+        <location filename="../qml/ProjRow.qml" line="101"/>
         <source>Kein Projekt gefunden.</source>
         <translation>未找到项目。</translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="182"/>
+        <location filename="../qml/ProjRow.qml" line="191"/>
         <source>⚠ NUR LOKAL</source>
         <translation>⚠ 仅本地</translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="183"/>
+        <location filename="../qml/ProjRow.qml" line="192"/>
         <source>PRIVAT</source>
         <translation>私有</translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="183"/>
+        <location filename="../qml/ProjRow.qml" line="192"/>
         <source>ÖFFENTLICH</source>
         <translation>公开</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/ProjRow.qml" line="186"/>
+        <location filename="../qml/ProjRow.qml" line="195"/>
         <source>%n NEU</source>
         <extracomment>badge: new versions upstream</extracomment>
         <translation>
@@ -1153,7 +1169,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/ProjRow.qml" line="188"/>
+        <location filename="../qml/ProjRow.qml" line="197"/>
         <source>%n OFFEN</source>
         <extracomment>badge: files with uncommitted changes</extracomment>
         <translation>
@@ -1161,7 +1177,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/ProjRow.qml" line="192"/>
+        <location filename="../qml/ProjRow.qml" line="201"/>
         <source>%1 Vers.</source>
         <extracomment>badge, short for &quot;versions&quot; (commits); %1 = formatted number</extracomment>
         <translation>
@@ -1169,13 +1185,13 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="194"/>
+        <location filename="../qml/ProjRow.qml" line="203"/>
         <source>%1 VERFÜGBAR</source>
         <comment>a newer program version</comment>
         <translation>%1 可用</translation>
     </message>
     <message>
-        <location filename="../qml/ProjRow.qml" line="195"/>
+        <location filename="../qml/ProjRow.qml" line="204"/>
         <source>✓ AKTUELL</source>
         <comment>program is up to date</comment>
         <translation>✓ 最新</translation>

@@ -74,12 +74,21 @@ Item {
             height: 20
             kind: "ok"
             fontSize: 9
-            // full label only if it fits next to the group name (a long sub-group name needs the short form)
-            readonly property bool roomy: parent.width - 16 - 26 - subLabel.implicitWidth - 8 >= 190
+            // full label only if it fits next to the group name (a long sub-group name needs the short form);
+            // measured with an invisible twin button, so it holds in every language
+            readonly property bool roomy: parent.width - 16 - 26 - subLabel.implicitWidth - 8 >= updAllFull.implicitWidth
             //: %1 = number of repos with news in this sub-group (long and short form)
             text: (roomy ? qsTr("↓ ALLE AKTUALISIEREN (%1)") : qsTr("↓ ALLE (%1)")).arg(paths.length)
             running: paths.some(p => pr.app.isRunning(p, "update"))
             onClicked: pr.app.doUpdateAll(paths)
+        }
+        Btn {
+            id: updAllFull
+            visible: false
+            height: 20
+            kind: "ok"
+            fontSize: 9
+            text: qsTr("↓ ALLE AKTUALISIEREN (%1)").arg(updAll.paths.length)
         }
     }
 

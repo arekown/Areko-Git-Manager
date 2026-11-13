@@ -3,12 +3,23 @@
 A desktop overview of all local Git repositories for Linux, built with Qt 6 / QML in a dark
 cyberpunk look. It finds the repositories below your project folders, shows their history and
 changes, commits and syncs them safely, keeps foreign repositories and AppImages up to date and
-publishes your own projects on GitHub. The user interface is in German.
+publishes your own projects on GitHub. The user interface follows the system language
+(German, English, Spanish, Italian, Chinese, Japanese; English for all others).
+
+![Overview: projects, version graph over all branches, timeline](screenshots/overview.png)
+
+| Image comparison (also Git LFS) | File map of a version |
+|---|---|
+| ![Image comparison](screenshots/image-diff.png) | ![File map](screenshots/file-map.png) |
+| **Commit with single hunks** | **AppImage updates with release notes** |
+| ![Commit](screenshots/commit.png) | ![Programs](screenshots/programs.png) |
+
+<sub>The screenshots show made-up demo data (`demo/`, created by `tools/make_demo_data.py`).</sub>
 
 ## Features
 
-- **Projects:** all repositories below the scanned folders (default `~/projects`, `~/Anwendungen`,
-  `~/AI`, `~/localweb`, changeable in the app), split into own and foreign repositories; foreign
+- **Projects:** all repositories below the scanned folders (default `~/projects`, `~/src`,
+  `~/git`, `~/code`, changeable in the app), split into own and foreign repositories; foreign
   repositories are grouped by the repository they live in
 - **History** with a version graph across all branches, tags and worktrees, a **timeline** and an
   **activity** chart of the last 30 days
@@ -66,6 +77,12 @@ cmake --install build
 - **AppImages** are looked up in `~/Anwendungen/HomeSuite`; another folder can be set as
   `programs/dir` in `~/.config/Areko/Areko Git Manager.conf`.
 
+## Demo data and tests
+
+`demo/repos.json` holds invented repositories, versions and programs. Start the app with
+`AGM_FIXTURE=demo/repos.json areko-git-manager` to try it without touching real repositories; the UI
+test uses the same data. `python3 tools/make_demo_data.py` recreates it with current dates (needs Pillow).
+
 ## License
 
 Areko Git Manager is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE): free for
@@ -82,7 +99,8 @@ Der Areko Git Manager zeigt alle lokalen Git-Repos im Überblick: Projekte und V
 Versions-Graph, Zeitleiste und Aktivität, Dateikarte, Bildvergleich (auch Git LFS), Commit mit
 einzelnen Abschnitten, Pull nur als Fast-Forward, Push nie mit Force, Papierkorb statt Löschen,
 Updates fremder Repos und von AppImages sowie GitHub sichern, Sichtbarkeit umschalten und
-„nur lokal“.
+„nur lokal“. Die Oberfläche folgt der Systemsprache (Deutsch, Englisch, Spanisch, Italienisch,
+Chinesisch, Japanisch; sonst Englisch). Die Bildschirmfotos oben zeigen ausgedachte Beispieldaten.
 
 Installation: `./install.sh --deps` (installiert die Bau-Abhängigkeiten, baut, testet und
 installiert nach `~/.local`); danach findet das Startmenü das Programm unter „git“.

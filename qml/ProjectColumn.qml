@@ -23,7 +23,7 @@ Item {
                 for (const r of fr) if (subs.indexOf(r.sub) < 0) subs.push(r.sub)
                 for (const s of subs) {
                     const items = fr.filter(r => r.sub === s)
-                    out.push({ t: "sub", l: (s || qsTr("Sonstige", "foreign repos without a sub-group")).toUpperCase(), n: items.length,
+                    out.push({ t: "sub", l: (s && s !== "Sonstige" ? s : qsTr("Sonstige", "foreign repos without a sub-group")).toUpperCase(), n: items.length,
                                upd: items.filter(r => app.newCount(r) > 0).map(r => r.path) })
                     for (const r of items) out.push({ t: "repo", r: r, sub: true })
                 }

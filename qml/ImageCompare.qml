@@ -8,8 +8,8 @@ Item {
     property string imgNew
     readonly property var pics: {
         const p = []
-        if (imgOld) p.push({ src: imgOld, lb: "◀ ALT", c: Theme.magenta })
-        if (imgNew) p.push({ src: imgNew, lb: imgOld ? "NEU ▶" : "NEU HINZUGEFÜGT", c: Theme.ok })
+        if (imgOld) p.push({ src: imgOld, lb: qsTr("◀ ALT"), c: Theme.magenta })
+        if (imgNew) p.push({ src: imgNew, lb: imgOld ? qsTr("NEU ▶") : qsTr("NEU HINZUGEFÜGT"), c: Theme.ok })
         return p
     }
     readonly property real pw: pics.length > 1 ? (width - 40 - 12) / 2 : width - 40

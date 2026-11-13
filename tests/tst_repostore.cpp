@@ -10,6 +10,7 @@
 #include <QFile>
 #include <QImage>
 #include <QSignalSpy>
+#include <QSettings>
 #include <QTemporaryDir>
 #include <QtTest>
 
@@ -156,7 +157,9 @@ private slots:
         m_oldCwd = QDir::currentPath();   // this process "works" in the agent worktree → active
         QVERIFY(QDir::setCurrent(a + QStringLiteral("/.claude/worktrees/agent1")));
 
-        m_store = new RepoStore;   // scans the default roots below the temporary HOME
+        // scanned folders as a user would set them (the defaults ~/projects ~/src ~/git ~/code have no ~/AI)
+        QSettings().setValue(QStringLiteral("roots"), QStringList{p(QStringLiteral("projects")), p(QStringLiteral("AI"))});
+        m_store = new RepoStore;   // scans those roots below the temporary HOME
         QSignalSpy spy(m_store, &RepoStore::reposChanged);
         QVERIFY(spy.wait(60000));
     }
@@ -180,7 +183,7 @@ private slots:
         expected.sort();
         QCOMPARE(found, expected);
         QVERIFY(!m_store->busy());
-        QCOMPARE(m_store->roots().size(), 4);
+        QCOMPARE(m_store->roots().size(), 2);
     }
 
     void classificationAndSummaryFields()
